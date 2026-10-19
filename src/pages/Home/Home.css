@@ -1,0 +1,353 @@
+.home-page {
+  min-height: 100vh;
+  background: var(--color-bg);
+  padding-bottom: 100px;
+  font-family: var(--font-body);
+}
+
+.home-content {
+  width: min(100% - 40px, 980px);
+  margin: 0 auto;
+  padding: 48px 0 40px;
+}
+
+.welcome-section {
+  margin-bottom: 32px;
+}
+
+.welcome-label {
+  margin: 0 0 10px;
+  color: var(--color-primary);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+}
+
+.welcome-section h1 {
+  margin: 0;
+  color: var(--color-ink);
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.welcome-section h1 span {
+  font-size: 0.8em;
+}
+
+.welcome-subtitle {
+  margin: 8px 0 0;
+  color: var(--color-muted);
+  font-size: 1rem;
+}
+
+.commute-options {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.commute-card {
+  width: 100%;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  text-align: left;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.commute-card--primary {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-700) 100%);
+  border-color: transparent;
+  color: #fff;
+}
+
+.commute-card--secondary {
+  background: var(--color-surface);
+}
+
+.commute-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.commute-card--secondary:hover {
+  border-color: var(--color-sky);
+}
+
+.commute-card:active {
+  transform: scale(0.99);
+}
+
+.commute-card:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.commute-icon {
+  flex-shrink: 0;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  font-size: 1.8rem;
+}
+
+.commute-card--primary .commute-icon {
+  background: rgba(255, 255, 255, 0.18);
+  color: #fff;
+}
+
+.commute-card--secondary .commute-icon {
+  background: var(--color-primary-tint);
+  color: var(--color-primary);
+}
+
+.commute-information {
+  flex: 1;
+  min-width: 0;
+}
+
+.commute-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.commute-title-row h2 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.commute-card--secondary .commute-title-row h2 {
+  color: var(--color-ink);
+}
+
+.commute-title-row > i {
+  flex-shrink: 0;
+  font-size: 1.3rem;
+  transition: transform 0.2s ease;
+}
+
+.commute-card--secondary .commute-title-row > i {
+  color: var(--color-primary);
+}
+
+.commute-card:hover .commute-title-row > i {
+  transform: translateX(4px);
+}
+
+.commute-information p {
+  margin: 6px 0 0;
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.commute-card--primary .commute-information p {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.commute-card--secondary .commute-information p {
+  color: var(--color-muted);
+}
+
+.quick-access {
+  margin-top: 52px;
+}
+
+.section-heading {
+  margin-bottom: 18px;
+}
+
+.section-heading h2 {
+  margin: 0;
+  color: var(--color-ink);
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.section-heading p {
+  margin: 5px 0 0;
+  color: var(--color-muted);
+  font-size: 0.85rem;
+}
+
+.quick-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.quick-card {
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-ink);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.quick-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--color-sky);
+  box-shadow: var(--shadow-md);
+}
+
+.quick-card:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.quick-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  background: var(--color-primary-tint);
+  color: var(--color-primary);
+  font-size: 1.35rem;
+}
+
+.quick-card span {
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.bottom-navbar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 76px;
+  display: flex;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.97);
+  border-top: 1px solid var(--color-border);
+  box-shadow: 0 -5px 20px rgba(6, 42, 84, 0.06);
+  backdrop-filter: blur(12px);
+  z-index: 90;
+}
+
+.bottom-nav-item {
+  width: min(130px, 20%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  border: none;
+  background: transparent;
+  color: #9aa6b5;
+  font-size: 0.7rem;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.bottom-nav-item i {
+  font-size: 1.2rem;
+}
+
+.bottom-nav-item:hover {
+  color: var(--color-primary);
+}
+
+.bottom-nav-item:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: -2px;
+  border-radius: var(--radius-sm);
+}
+
+.bottom-nav-item.active {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.bottom-nav-item.active i {
+  font-size: 1.3rem;
+}
+
+@media (max-width: 700px) {
+  .home-content {
+    width: calc(100% - 28px);
+    padding-top: 32px;
+  }
+
+  .commute-card {
+    padding: 18px;
+    gap: 14px;
+    border-radius: var(--radius-md);
+  }
+
+  .commute-icon {
+    width: 54px;
+    height: 54px;
+    border-radius: var(--radius-sm);
+    font-size: 1.5rem;
+  }
+
+  .commute-title-row h2 {
+    font-size: 1rem;
+  }
+
+  .commute-information p {
+    font-size: 0.8rem;
+  }
+
+  .quick-grid {
+    gap: 10px;
+  }
+
+  .quick-card {
+    min-height: 125px;
+    border-radius: var(--radius-sm);
+  }
+
+  .quick-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+  }
+
+  .quick-card span {
+    font-size: 0.76rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .home-content {
+    width: calc(100% - 24px);
+  }
+
+  .welcome-section h1 {
+    font-size: 1.9rem;
+  }
+
+  .quick-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .quick-card {
+    min-height: 80px;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 14px 18px;
+  }
+}

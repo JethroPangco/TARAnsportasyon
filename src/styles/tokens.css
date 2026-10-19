@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap");
+
+:root {
+  --color-primary: #004aad;
+  --color-primary-600: #0057c7;
+  --color-primary-700: #003c8a;
+  --color-primary-900: #062a54;
+  --color-primary-tint: #eaf1fc;
+  --color-warning: #b7791f;
+  --color-warning-tint: #fff7ec;
+
+  --color-accent: #ff3131;
+  --color-accent-tint: #ffecea;
+
+  --color-sky: #799ef6;
+
+  --color-ink: #12304f;
+  --color-muted: #6b7a90;
+  --color-border: #e1e8f0;
+  --color-surface: #ffffff;
+  --color-bg: #f5f8fc;
+
+  --radius-sm: 12px;
+  --radius-md: 16px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+
+  --shadow-sm: 0 4px 14px rgba(6, 42, 84, 0.06);
+  --shadow-md: 0 10px 26px rgba(6, 42, 84, 0.1);
+  --shadow-lg: 0 18px 40px rgba(6, 42, 84, 0.16);
+
+  --font-display: "Baloo 2", "Segoe UI", sans-serif;
+  --font-body: "Inter", "Segoe UI", sans-serif;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
