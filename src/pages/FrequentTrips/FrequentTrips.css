@@ -1,0 +1,159 @@
+.frequent-trips-page {
+  min-height: 100vh;
+  padding: 24px 20px 48px;
+  background: var(--tara-background, #f5f7f8);
+  color: var(--tara-text, #172b3a);
+}
+
+.frequent-trips-header,
+.frequent-trips-content {
+  width: min(100%, 680px);
+  margin: 0 auto;
+}
+
+.frequent-trips-back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+.frequent-trips-title {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 28px 0;
+}
+
+.frequent-trips-title-icon,
+.frequent-trips-empty-icon,
+.frequent-trip-icon {
+  display: grid;
+  flex: 0 0 auto;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: #e6f3ef;
+  color: #087e68;
+  font-size: 21px;
+}
+
+.frequent-trips-title p,
+.frequent-trips-title h1 {
+  margin: 0;
+}
+
+.frequent-trips-title p {
+  color: #087e68;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.frequent-trips-title h1 {
+  margin-top: 3px;
+  font-size: 28px;
+}
+
+.frequent-trips-empty {
+  padding: 40px 24px;
+  border: 1px solid #e3e9ec;
+  border-radius: 18px;
+  background: #fff;
+  text-align: center;
+}
+
+.frequent-trips-empty-icon {
+  margin: 0 auto 18px;
+}
+
+.frequent-trips-empty h2 {
+  margin: 0 0 8px;
+  font-size: 20px;
+}
+
+.frequent-trips-empty p {
+  max-width: 420px;
+  margin: 0 auto 20px;
+  color: #647581;
+  line-height: 1.5;
+}
+
+.frequent-trips-primary-button,
+.frequent-trip-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 10px;
+  background: #087e68;
+  color: #fff;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.frequent-trips-list {
+  display: grid;
+  gap: 14px;
+}
+
+.frequent-trip-card {
+  padding: 18px;
+  border: 1px solid #e3e9ec;
+  border-radius: 16px;
+  background: #fff;
+}
+
+.frequent-trip-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.frequent-trip-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  font-size: 18px;
+}
+
+.frequent-trip-heading > div:last-child {
+  display: grid;
+  gap: 4px;
+}
+
+.frequent-trip-heading span {
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.frequent-trip-heading strong {
+  color: #647581;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.frequent-trip-route {
+  display: grid;
+  gap: 7px;
+  margin: 18px 0;
+  padding-left: 54px;
+}
+
+.frequent-trip-route i {
+  color: #087e68;
+}
+
+.frequent-trip-action {
+  width: 100%;
+}

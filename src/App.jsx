@@ -15,6 +15,9 @@ import RouteFilter from "./pages/RouteFilter/RouteFilter";
 import Favorites from "./pages/Favorites/Favorites";
 import Profile from "./pages/Profile/Profile";
 import TripPlanner from "./pages/TripPlanner/TripPlanner";
+import Settings from "./pages/Settings/Settings";
+import FrequentTrips from "./pages/FrequentTrips/FrequentTrips";
+import NotFound from "./pages/NotFound/NotFound";
 
 function App() {
   const [showSplash, setShowSplash] = useState(
@@ -45,16 +48,16 @@ function App() {
         <Route path="/suggestions" element={<Suggestions />} />
         <Route path="/map" element={<Map />} />
         <Route path="/trip-status" element={<TripStatus />} />
-       <Route
-          path="/city-filter"
-          element={<CityFilter />}
-        />
-                <Route path="/profile" element={<Profile />} />
-                <Route path="/trip-planner" element={<TripPlanner />} />
+        <Route path="/city-filter" element={<CityFilter />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/settings" element={<Settings />} />
+        <Route path="/frequent-trips" element={<FrequentTrips />} />
+        <Route path="/trip-planner" element={<TripPlanner />} />
         <Route path="/favorites" element={<Favorites />} />
         <Route path="/mode-filter" element={<ModeFilter />} />
         <Route path="/route-filter" element={<RouteFilter />} />
         <Route path="/trip-summary" element={<TripSummary />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );

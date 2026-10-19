@@ -90,18 +90,30 @@ function Map() {
   }
 
   function handleStartTrip() {
-    localStorage.setItem(
-      "tara_active_trip",
-      JSON.stringify({
-        from: fromLocation,
-        to: destination,
-        city: cityName,
-        mode: transportMode,
-        routeName,
-        fare: estimatedFare,
-        travelTime: estimatedTime,
-      })
-    );
+    const activeTrip = {
+      from: fromLocation,
+      to: destination,
+      city: cityName,
+      mode: transportMode,
+      routeName,
+      fare: estimatedFare,
+      travelTime: estimatedTime,
+    };
+    localStorage.setItem("tara_active_trip", JSON.stringify(activeTrip));
+
+    try {
+      const historyKey = `${cityName}-${transportMode}-${routeName}`;
+      const history = JSON.parse(localStorage.getItem("tara_trip_history") || "{}");
+      const previousTrip = history[historyKey] || {};
+      history[historyKey] = {
+        ...activeTrip,
+        count: (previousTrip.count || 0) + 1,
+        lastUsed: new Date().toISOString(),
+      };
+      localStorage.setItem("tara_trip_history", JSON.stringify(history));
+    } catch (error) {
+      console.error("Couldn't update frequent trip history.", error);
+    }
 
     navigate("/trip-status", {
       state: {
